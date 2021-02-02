@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-const seed = require("./seeders/seed");
+//const seed = require("./seeders/seed");
 const db = require("./models");
 
 // Sets up the Express App
@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-require("./routes/apiRoutes.js")(app);
+//require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", 
