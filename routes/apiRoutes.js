@@ -6,7 +6,14 @@ module.exports = function(app) {
     //GET API to fetch the last workout
     app.get("/api/workouts/", (req, res)=>{
         const id = req.params.id;
-        db.Workout.find({})
+        db.Workout.aggregate([
+            {
+                $addFields: {
+                    totalDuration: {$sum : "$exercises.duration"}
+                }
+            },
+        ]
+        )
         .then(dbWorkout => {
             res.json(dbWorkout);
         })
