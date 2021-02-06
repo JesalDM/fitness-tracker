@@ -55,3 +55,7 @@ This project is licensed under the terms of the MIT license.
 ## For Review
 * Github Repository URL: https://github.com/JesalDM/fitness-tracker
 * Deployed application Heroku URL: https://my-fitness-tracker-app.herokuapp.com/
+* Application demo: ![Application-Demo](./public/images/fitness-tracker-demo.gif)
+* Screenshot : 
+      - ![Dashboard Screenshot](./public/images/fitness-tracker-dashboard.png)
+      - ![Landing Page Screenshot](./public/images/fitness-tracker-last-workout.png)
