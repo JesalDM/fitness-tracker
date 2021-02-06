@@ -6,7 +6,7 @@ const db = require("./models");
 
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(logger("dev"));
 
@@ -19,7 +19,7 @@ app.use(express.static("public"));
 
 // Routes
 // =============================================================
-//require("./routes/apiRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);
 require("./routes/htmlRoutes.js")(app);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", 

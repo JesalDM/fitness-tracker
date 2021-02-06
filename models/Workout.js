@@ -17,25 +17,25 @@ const WorkoutSchema = new Schema({
         },
         duration: {
             type: Number,
-            min: 1,
+            min: [1, 'Please enter a valid number greater than 0'],
             required: [true, 'Duration is required']
         },
         weight: {
             type: Number,
-            min: 1
+            min: [1, 'Please enter a valid number greater than 0'],
         },
 
         reps: {
             type: Number,
-            min: 1
+            min: [1, 'Please enter a valid number greater than 0'],
         },
         sets: {
             type: Number,
-            min: 1
+            min: [1, 'Please enter a valid number greater than 0'],
         },
         distance: {
             type: Number,
-            min: 1
+            min: [1, 'Please enter a valid number greater than 0'],
         }
     }
   ]
