@@ -49,4 +49,23 @@ module.exports = function(app) {
         });
     });
 
+    //GET API that calculates total duration of each workout from the past 7 days on on stats page
+    app.get("/api/workouts/range", (req, res)=>{
+        db.Workout.aggregate([
+            {
+                $addFields: {
+                    totalDuration: {$sum : "$exercises.duration"}
+                }
+            },
+        ])
+        .sort({_id:-1})
+        .limit(7)
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.status(500).json(err);
+        });
+    });
+
 };
