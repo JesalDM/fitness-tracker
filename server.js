@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const db = require("./models");
 require('dotenv').config();
 require("./seeders/seed.js");
-
 // Sets up the Express App
 const app = express();
 const PORT = process.env.PORT || 3001;
