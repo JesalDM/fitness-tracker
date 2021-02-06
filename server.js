@@ -3,6 +3,7 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 //const seed = require("./seeders/seed");
 const db = require("./models");
+require('dotenv').config();
 
 // Sets up the Express App
 const app = express();
